@@ -1,4 +1,3 @@
-
 "use client";
 import React from "react";
 import { Coffee, Pizza, Utensils } from "lucide-react";
@@ -17,7 +16,10 @@ export default function MenuPage() {
       >
         <div className="absolute inset-0 bg-black/50"></div>
         <h1 className="relative z-10 text-5xl md:text-7xl font-bold text-white text-center">
-          Our Delicious Menu
+          Our Delicious <br />
+          <span className="text-[var(--color-red-shade)] font-bold md:text-9xl font-dancing-script">
+            Menu
+          </span>
         </h1>
       </section>
 
@@ -115,14 +117,19 @@ function MenuCard({
 }) {
   return (
     <div className="bg-white shadow-lg rounded-2xl overflow-hidden  transform transition duration-300 group hover:scale-105 ">
-      <Image width={800} height={600} src={img} alt={title} className=" w-full aspect-4/3 scale-110 group-hover:scale-100 transform transition duration-300" />
+      <Image
+        width={800}
+        height={600}
+        src={img}
+        alt={title}
+        className=" w-full aspect-4/3 scale-110 group-hover:scale-100 transform transition duration-300"
+      />
       <div className="p-5">
         <h3 className="text-xl font-semibold mb-2">{title}</h3>
         <p className="text-gray-600 text-sm mb-4 min-h-10">{desc}</p>
         <div className="flex justify-between items-center">
           <span className="text-red-600 font-bold">{price}</span>
           <button className="px-4 py-1 bg-[var(--color-red-shade)] text-white rounded-lg text-sm hover:bg-red-700">
-
             Order
           </button>
         </div>

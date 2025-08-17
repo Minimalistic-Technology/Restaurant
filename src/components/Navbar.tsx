@@ -56,11 +56,21 @@ const Navbar: React.FC = () => {
             </Link>
           </li>
           {loggedIn ? (
-            <li>
-              <Link href={"/profile"} className="hover:text-[#D4AF37]">
-                Profile
-              </Link>
-            </li>
+            <>
+              <li>
+                <Link href={"/profile"} className="hover:text-[#D4AF37]">
+                  Profile
+                </Link>
+              </li>
+              <li>
+                <button
+                  onClick={() => localStorage.removeItem("email")}
+                  className="hover:text-[#D4AF37]"
+                >
+                  Logout
+                </button>
+              </li>
+            </>
           ) : (
             <>
               <li>

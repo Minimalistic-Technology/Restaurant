@@ -16,6 +16,7 @@
   --font-mono: var(--font-geist-mono);
   --font-poppins:var(--font-poppins-var);
   --font-fondamento:var(--font-fondamento-var);
+  --font-dancing-script:var(--dancing-script-var);
 }
 
 @media (prefers-color-scheme: dark) {
