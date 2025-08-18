@@ -57,8 +57,8 @@ const Gallery = () => {
     },
     {
       id: 9,
-      title: "Diwali Festival Celebration",
-      imageUrl: "https://images.unsplash.com/photo-1603383928972-2b9b7a5f7c3a",
+      title: "Wine and Dine",
+      imageUrl: "https://plus.unsplash.com/premium_photo-1678897750441-b7fe348b14a5",
       category: "Events"
     }
   ];
@@ -69,7 +69,7 @@ const Gallery = () => {
     : galleryItems.filter(item => item.category === activeFilter);
 
   return (
-    <div className='w-full h-full'>
+    <div className='w-full h-full pt-20 pb-10'>
       <div className='flex flex-col items-center justify-center gap-4 font-serif'>
         <h2 className='text-3xl font-bold'>Our Gallery</h2>
         <div className='space-x-4'>

@@ -3,7 +3,7 @@ import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
 
 const Contact = () => {
   return (
-    <div className='mx-8 mb-20'>
+    <div className='mx-8 mb-20 pt-30'>
         <div className='w-full h-full flex shadow-lg shadow-gray-400 rounded-xl'>
             <div className='flex-1 px-10 py-10 bg-gradient-to-tl from-[#f58c30] to-[#c75000] text-white space-y-6 rounded-bl-xl rounded-tl-xl'>
                 <h2 className='text-3xl font-bold'>Contact Us</h2>
