@@ -57,8 +57,8 @@ const Gallery = () => {
     },
     {
       id: 9,
-      title: "Diwali Festival Celebration",
-      imageUrl: "https://images.unsplash.com/photo-1603383928972-2b9b7a5f7c3a",
+      title: "Wine and Dine",
+      imageUrl: "https://plus.unsplash.com/premium_photo-1678897750441-b7fe348b14a5",
       category: "Events"
     }
   ];
@@ -69,46 +69,48 @@ const Gallery = () => {
     : galleryItems.filter(item => item.category === activeFilter);
 
   return (
-    <div className='w-full h-full'>
-      <div className='flex flex-col items-center justify-center gap-4 '>
-        <h2 className='text-3xl font-bold'>Our Gallery</h2>
+    <div className='w-full h-full pt-13 pb-10 bg-white text-gray-800'>
+      <div className='w-full h-75 bg-cover bg-no-repeat bg-center flex flex-col items-center justify-center text-white bg-[url("https://plus.unsplash.com/premium_photo-1709031620960-877745c2bc34?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Z2FsbGVyeXxlbnwwfHwwfHx8MA%3D%3D")]'>
+        <h2 className='text-7xl font-bold text-[#ad0a0a]'>Our Gallery</h2>
+      </div>
+      <div className='flex flex-col items-center justify-center gap-4 mt-5'>
         <div className='space-x-4'>
             <button 
               onClick={() => setActiveFilter('All')}
-              className={`px-4 py-1 border-2 border-[#d4a017] rounded-full hover:bg-[#d4a017] cursor-pointer ${
+              className={`px-4 py-1 text-xl border-2 border-[#ad0a0a] rounded-full hover:bg-gradient-to-tl from-[#e85004] to-[#ad0a0a] cursor-pointer ${
                 activeFilter === 'All' 
-                  ? 'bg-[#d4a017] text-white' 
-                  : 'text-[#d4a017] hover:text-white'
+                  ? 'bg-gradient-to-tl from-[#e85004] to-[#ad0a0a] text-white' 
+                  : 'text-[#ad0a0a] hover:text-white'
               }`}
             >
               All
             </button>
             <button 
               onClick={() => setActiveFilter('Food')}
-              className={`px-4 py-1 border-2 border-[#d4a017] rounded-full hover:bg-[#d4a017] cursor-pointer ${
+              className={`px-4 py-1 text-xl border-2 border-[#ad0a0a] rounded-full hover:bg-gradient-to-tl from-[#e85004] to-[#ad0a0a] cursor-pointer ${
                 activeFilter === 'Food' 
-                  ? 'bg-[#d4a017] text-white' 
-                  : 'text-[#d4a017] hover:text-white'
+                  ? 'bg-gradient-to-tl from-[#e85004] to-[#ad0a0a] text-white' 
+                  : 'text-[#ad0a0a] hover:text-white'
               }`}
             >
               Food
             </button>
             <button 
               onClick={() => setActiveFilter('Ambiance')}
-              className={`px-4 py-1 border-2 border-[#d4a017] rounded-full hover:bg-[#d4a017] cursor-pointer ${
+              className={`px-4 py-1 text-xl border-2 border-[#ad0a0a] rounded-full hover:bg-gradient-to-tl from-[#e85004] to-[#ad0a0a] cursor-pointer ${
                 activeFilter === 'Ambiance' 
-                  ? 'bg-[#d4a017] text-white' 
-                  : 'text-[#d4a017] hover:text-white'
+                  ? 'bg-gradient-to-tl from-[#e85004] to-[#ad0a0a] text-white' 
+                  : 'text-[#ad0a0a] hover:text-white'
               }`}
             >
               Ambiance
             </button>
             <button 
               onClick={() => setActiveFilter('Events')}
-              className={`px-4 py-1 border-2 border-[#d4a017] rounded-full hover:bg-[#d4a017] cursor-pointer ${
+              className={`px-4 py-1 text-xl border-2 border-[#ad0a0a] rounded-full hover:bg-gradient-to-tl from-[#e85004] to-[#ad0a0a] cursor-pointer ${
                 activeFilter === 'Events' 
-                  ? 'bg-[#d4a017] text-white' 
-                  : 'text-[#d4a017] hover:text-white'
+                  ? 'bg-gradient-to-tl from-[#e85004] to-[#ad0a0a] text-white' 
+                  : 'text-[#ad0a0a] hover:text-white'
               }`}
             >
               Events

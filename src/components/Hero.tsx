@@ -14,7 +14,7 @@ const Hero: React.FC = () => {
         src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         alt="Restaurant Ambience"
         fill
-        className="object-cover"
+        className="object-cover "
         priority
       />
       <div className="absolute w-[50%] rounded-full m-auto h-[50%] inset-0 bg-gradient-to-b from-black/50 via-black/60 to-transparent" />
