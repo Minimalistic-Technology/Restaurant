@@ -2,18 +2,15 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
+import useLocalStorage from "@/app/hooks/useLocalStorage";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [loggedIn, setLoggedIn] = useState(false);
-
-  useEffect(() => {
-    if (localStorage.getItem("email")) {
-      setLoggedIn(true);
-    }
-  }, []);
+  const {loggedIn,setLoggedIn} = useLocalStorage();
 
   const toggleMenu = () => setIsOpen(!isOpen);
+
+  
 
   return (
     <nav className="fixed w-full z-50  text-white shadow-md bg-[var(--color-red-shade)]">
@@ -64,8 +61,10 @@ const Navbar: React.FC = () => {
               </li>
               <li>
                 <button
-                  onClick={() => localStorage.removeItem("email")}
-                  className="hover:text-[#D4AF37]"
+                  onClick={() => {
+                    localStorage.removeItem("email")
+                    setLoggedIn(false)}}
+                  className="hover:text-[#D4AF37] cursor-pointer"
                 >
                   Logout
                 </button>

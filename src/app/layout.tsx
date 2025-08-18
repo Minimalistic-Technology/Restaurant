@@ -11,6 +11,7 @@ import {
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { CartProvider } from "@/context/CartContext";
 
 
 const dancingScript = Dancing_Script({
@@ -43,9 +44,11 @@ export default function RootLayout({
       <body
         className={`${dancingScript.variable} ${poppins.variable} ${fondamento.variable}  antialiased`}
       >
+        <CartProvider>
         <Navbar/>
         {children}
         <Footer/>
+        </CartProvider>
       </body>
     </html>
   );

@@ -1,22 +1,28 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import useLocalStorage from "../hooks/useLocalStorage";
+import Link from "next/link";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(true);
+  const { loggedIn, setLoggedIn } = useLocalStorage();
   const router = useRouter();
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    alert(`Login with ${email}`);
-    if (email) localStorage.setItem("email", email);
-    router.replace("/");
+    if (email) {
+      localStorage.setItem("email", email);
+      router.replace("/");
+      setLoggedIn(true);
+      window.location.reload();
+    }
   };
 
   useEffect(() => {
-    if (localStorage.getItem("email")) {
+    if (loggedIn) {
       router.replace("/");
       setLoading(true);
     } else {
@@ -24,7 +30,7 @@ export default function LoginPage() {
       setPassword("User@1234");
       setLoading(false);
     }
-  }, [router]);
+  }, [router,loggedIn]);
 
   return (
     <>
@@ -53,16 +59,16 @@ export default function LoginPage() {
               />
               <button
                 type="submit"
-                className="w-full bg-[var(--color-red-shade)] text-white py-2 rounded-lg hover:bg-amber-700 transition"
+                className="w-full bg-[var(--color-red-shade)] text-white py-2 rounded-lg hover:bg-amber-700 transition cursor-pointer"
               >
                 Login
               </button>
             </form>
             <p className="text-center text-sm mt-4">
               Don’t have an account?{" "}
-              <a href="/signup" className="text-amber-600 font-medium">
+              <Link href="/signup" className="text-amber-600 font-medium ">
                 Sign Up
-              </a>
+              </Link>
             </p>
           </div>
         </main>

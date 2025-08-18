@@ -3,7 +3,7 @@ import { MdPerson } from 'react-icons/md'
 
 const About = () => {
   return (
-    <div className='w-full h-full font-serif'>
+    <div className='w-full h-full '>
         <div className='w-full h-95 bg-cover bg-no-repeat bg-center flex flex-col items-center justify-center text-white bg-[url("https://media.istockphoto.com/id/1292567163/photo/assorted-indian-foods-pav-bhaji-veg-ball-manchurian-mutter-paneer-malai-kofta-and-palak.webp?a=1&b=1&s=612x612&w=0&k=20&c=9O7Rh-ysuAoKQsu1rFKiMueVFtLdSxrnO83vUaj_5sQ=")]'>
             <h1 className='text-4xl font-bold'>About Our Restaurent Management System</h1>
             <p className='text-xl font-medium'>Streamlining restaurant operations with innovative technology</p>

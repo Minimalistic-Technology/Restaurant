@@ -2,6 +2,8 @@
 import React from "react";
 import { Coffee, Pizza, Utensils } from "lucide-react";
 import Image from "next/image";
+import { Star } from "lucide-react";
+import { useCart } from "@/context/CartContext";
 
 export default function MenuPage() {
   return (
@@ -35,19 +37,22 @@ export default function MenuPage() {
             desc="Crispy golden bread topped with buttery garlic."
             price="₹120"
             img="https://images.unsplash.com/photo-1619535860434-ba1d8fa12536?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Z2FybGljJTIwYnJlYWR8ZW58MHwwfDB8fHwy"
-          />
+            rating={4.7}
+            />
           <MenuCard
             title="Bruschetta"
             desc="Toasted bread topped with tomato, olive oil."
             price="₹150"
             img="https://images.unsplash.com/photo-1720636615079-1841bcaaec84?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YnJ1c2NoZXR0YXxlbnwwfDB8MHx8fDI%3D"
-          />
+            rating={4.8}
+            />
           <MenuCard
             title="Stuffed Mushrooms"
             desc="Juicy mushrooms filled with cheese & herbs."
             price="₹180"
             img="https://images.unsplash.com/photo-1622268805718-ca073548d4ad?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c3R1ZmZlZCUyMG11c2hyb29tc3xlbnwwfDB8MHx8fDI%3D"
-          />
+            rating={4.7}
+            />
         </div>
 
         {/* Pizza */}
@@ -60,19 +65,22 @@ export default function MenuPage() {
             desc="Classic pizza with mozzarella, tomato & basil."
             price="₹350"
             img="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWFyZ2hlcml0YXxlbnwwfDB8MHx8fDI%3D"
-          />
+            rating={4.6}
+            />
           <MenuCard
             title="Pepperoni"
             desc="Loaded with pepperoni & mozzarella cheese."
             price="₹420"
             img="https://images.unsplash.com/photo-1605478371310-a9f1e96b4ff4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGVwcGVyb25pfGVufDB8MHwwfHx8Mg%3D%3D"
-          />
+            rating={4.9}
+            />
           <MenuCard
             title="Veggie Supreme"
             desc="Onions, peppers, olives & extra cheese."
             price="₹400"
             img="https://images.unsplash.com/photo-1617470703128-26a0fc9af10f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dmVnZ2llJTIwcGl6emF8ZW58MHwwfDB8fHwy"
-          />
+            rating={4.7}
+            />
         </div>
 
         {/* Beverages */}
@@ -85,19 +93,22 @@ export default function MenuPage() {
             desc="Iced coffee served with cream & sugar."
             price="₹120"
             img="https://images.unsplash.com/photo-1625242662341-5e92c5101338?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y29sZCUyMGNvZmZlZXxlbnwwfDB8MHx8fDI%3D"
-          />
+            rating={4.8}
+            />
           <MenuCard
             title="Fresh Lime Soda"
             desc="Refreshing soda with a tangy lime twist."
             price="₹90"
             img="https://images.unsplash.com/photo-1617984312743-d81d2c151041?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bGltZSUyMHNvZGF8ZW58MHwwfDB8fHwy"
-          />
+            rating={4.7}
+            />
           <MenuCard
             title="Mango Smoothie"
             desc="Chilled mango smoothie with creamy yogurt."
             price="₹150"
             img="https://images.unsplash.com/photo-1619898804188-e7bad4bd2127?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWFuZ28lMjBzbW9vdGhpZXxlbnwwfDB8MHx8fDI%3D"
-          />
+            rating={4.6}
+            />
         </div>
       </section>
     </div>
@@ -109,31 +120,87 @@ function MenuCard({
   desc,
   price,
   img,
+  rating,
 }: {
   title: string;
   desc: string;
   price: string;
   img: string;
+  rating: number;
 }) {
+  const { addToCart } = useCart();
+
   return (
-    <div className="bg-white shadow-lg rounded-2xl overflow-hidden  transform transition duration-300 group hover:scale-105 ">
+    <div className="bg-white shadow-lg rounded-2xl overflow-hidden transform transition duration-300 group hover:scale-105">
       <Image
         width={800}
         height={600}
         src={img}
         alt={title}
-        className=" w-full aspect-4/3 scale-110 group-hover:scale-100 transform transition duration-300"
+        className="w-full aspect-4/3 scale-110 group-hover:scale-100 transform transition duration-300"
       />
       <div className="p-5">
         <h3 className="text-xl font-semibold mb-2">{title}</h3>
         <p className="text-gray-600 text-sm mb-4 min-h-10">{desc}</p>
+        
+        {/* Ratings */}
+        <div className="flex items-center mb-3">
+          {Array.from({ length: 5 }).map((_, i) => (
+            <Star
+              key={i}
+              className={`h-5 w-5 ${
+                i < rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"
+              }`}
+            />
+          ))}
+        </div>
+
         <div className="flex justify-between items-center">
           <span className="text-red-600 font-bold">{price}</span>
-          <button className="px-4 py-1 bg-[var(--color-red-shade)] text-white rounded-lg text-sm hover:bg-red-700">
-            Order
+          <button
+            onClick={() =>
+              addToCart({ title, price: parseInt(price.replace("₹", "")), img, qty: 1 })
+            }
+            className="px-4 py-1 bg-[var(--color-red-shade)] text-white rounded-lg text-sm hover:bg-red-700"
+          >
+            Add to Cart
           </button>
         </div>
       </div>
     </div>
   );
 }
+
+// function MenuCard({
+//   title,
+//   desc,
+//   price,
+//   img,
+// }: {
+//   title: string;
+//   desc: string;
+//   price: string;
+//   img: string;
+// }) {
+//   return (
+//     <div className="bg-white shadow-lg rounded-2xl overflow-hidden  transform transition duration-300 group hover:scale-105 ">
+//       <Image
+//         width={800}
+//         height={600}
+//         src={img}
+//         alt={title}
+//         className=" w-full aspect-4/3 scale-110 group-hover:scale-100 transform transition duration-300"
+//       />
+//       <div className="p-5">
+//         <h3 className="text-xl font-semibold mb-2">{title}</h3>
+//         <p className="text-gray-600 text-sm mb-4 min-h-10">{desc}</p>
+//         <div className="flex justify-between items-center">
+//           <span className="text-red-600 font-bold">{price}</span>
+//           <button className="px-4 py-1 bg-[var(--color-red-shade)] text-white rounded-lg text-sm hover:bg-red-700">
+//             Order
+//           </button>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
