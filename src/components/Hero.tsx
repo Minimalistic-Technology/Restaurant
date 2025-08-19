@@ -6,7 +6,7 @@ const Hero: React.FC = () => {
   return (
     <section
       id="home"
-      className="relative h-screen flex items-center justify-center text-center text-white "
+      className="relative h-150 flex items-center justify-center text-center text-white "
     >
       {/* Background Image */}
       <Image
@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
         className="object-cover "
         priority
       />
-      <div className="absolute w-[50%] rounded-full m-auto h-[50%] inset-0 bg-gradient-to-b from-black/50 via-black/60 to-transparent" />
+      <div className="absolute w-full  m-auto h-full inset-0 bg-gradient-to-b from-black/50 via-black/60 to-transparent" />
 
       {/* Overlay Text */}
       <div className="relative z-10 max-w-xl px-4  h-120 flex flex-col justify-center items-center  rounded-[100%]">

@@ -70,8 +70,8 @@ const Gallery = () => {
 
   return (
     <div className='w-full h-full pt-13 pb-10 bg-white text-gray-800'>
-      <div className='w-full h-75 bg-cover bg-no-repeat bg-center flex flex-col items-center justify-center text-white bg-[url("https://plus.unsplash.com/premium_photo-1709031620960-877745c2bc34?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Z2FsbGVyeXxlbnwwfHwwfHx8MA%3D%3D")]'>
-        <h2 className='text-7xl font-bold text-[#ad0a0a]'>Our Gallery</h2>
+      <div className='w-full h-75 bg-cover bg-no-repeat bg-center flex flex-col items-center justify-center text-white bg-[url("https://images.unsplash.com/photo-1606819717115-9159c900370b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")]'>
+        <h2 className='text-7xl font-normal '>Our Gallery</h2>
       </div>
       <div className='flex flex-col items-center justify-center gap-4 mt-5'>
         <div className='space-x-4'>

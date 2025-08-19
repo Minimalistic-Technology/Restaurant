@@ -54,11 +54,11 @@ const Navbar: React.FC = () => {
           </li>
           {loggedIn ? (
             <>
-              <li>
+              {/* <li>
                 <Link href={"/profile"} className="hover:text-[#D4AF37]">
                   Profile
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <button
                   onClick={() => {

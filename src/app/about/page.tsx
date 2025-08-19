@@ -4,10 +4,11 @@ import { MdPerson } from 'react-icons/md'
 
 const About = () => {
   return (
-    <div className='w-full h-full font-serif pt-13 bg-white text-gray-800'>
-        <div className='w-full h-75 bg-cover bg-no-repeat bg-center flex flex-col items-center justify-center text-white bg-[url("https://media.istockphoto.com/id/1292567163/photo/assorted-indian-foods-pav-bhaji-veg-ball-manchurian-mutter-paneer-malai-kofta-and-palak.webp?a=1&b=1&s=612x612&w=0&k=20&c=9O7Rh-ysuAoKQsu1rFKiMueVFtLdSxrnO83vUaj_5sQ=")]'>
-            <h1 className='text-5xl font-bold text-[#ad0a0a]'>About Our Restaurent Management System</h1>
-            <p className='text-xl font-medium'>Streamlining restaurant operations with innovative technology</p>
+    <div className='w-full h-full  pt-13 bg-white text-gray-800'>
+        <div className='relative w-full h-75 bg-cover bg-no-repeat bg-center flex flex-col items-center justify-center text-white bg-[url("https://images.unsplash.com/photo-1488992783499-418eb1f62d08?q=80&w=1289&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")]'>
+            <h1 className='text-7xl font-normal z-2 '>Our Restaurant</h1>
+            <p className='text-lg font-medium z-2'>Streamlining restaurant operations with innovative technology</p>
+      <div className="absolute w-full rounded-full m-auto h-full inset-0 bg-gradient-to-b from-black/50 via-black/60 to-transparent z-1" />
         </div>
         <div className='px-30 py-20 flex flex-col'>
             <div className='flex justify-between gap-10'>
