@@ -1,14 +1,22 @@
 "use client";
 import { useState } from "react";
-
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 export default function SignupPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const router = useRouter();
+
   const handleSignup = (e: React.FormEvent) => {
     e.preventDefault();
-    alert(`Signup for ${name}`);
+    if (name && email && password) {
+      alert(`Signup successful for ${name}! Please login.`);
+      router.push("/login");
+    } else {
+      alert("Please fill in all fields.");
+    }
   };
 
   return (
@@ -46,9 +54,9 @@ export default function SignupPage() {
         </form>
         <p className="text-center text-sm mt-4">
           Already have an account?{" "}
-          <a href="/login" className="text-amber-600 font-medium">
+          <Link href="/login" className="text-amber-600 font-medium">
             Login
-          </a>
+          </Link>
         </p>
       </div>
     </main>

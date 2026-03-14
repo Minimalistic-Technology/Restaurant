@@ -13,11 +13,13 @@ export default function LoginPage() {
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    if (email) {
+    if (email === "admin@gmail.com" && password === "admin@123") {
       localStorage.setItem("email", email);
       router.replace("/");
       setLoggedIn(true);
       window.location.reload();
+    } else {
+      alert("Invalid credentials. Please use admin@gmail.com / admin@123");
     }
   };
 
@@ -26,8 +28,8 @@ export default function LoginPage() {
       router.replace("/");
       setLoading(true);
     } else {
-      setEmail("user@example.com");
-      setPassword("User@1234");
+      setEmail("admin@gmail.com");
+      setPassword("admin@123");
       setLoading(false);
     }
   }, [router,loggedIn]);
