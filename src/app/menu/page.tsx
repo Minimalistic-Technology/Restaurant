@@ -1,9 +1,11 @@
 "use client";
+import dishes from "@/data/menuData.json"
 import React from "react";
 import { Coffee, Pizza, Utensils } from "lucide-react";
 import Image from "next/image";
 import { Star } from "lucide-react";
 import { useCart } from "@/context/CartContext";
+import FeaturedDishes from "@/components/FeaturedDishes";
 
 export default function MenuPage() {
   return (
@@ -31,8 +33,24 @@ export default function MenuPage() {
         <h2 className="text-3xl font-semibold flex items-center gap-2 mb-8">
           <Utensils className="text-red-600" /> Starters
         </h2>
+
         <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <MenuCard
+        {dishes
+          .filter((dish) => dish.category === "starters")
+          .map((dish,index) => (
+            <MenuCard
+             key={index}
+             title={dish.name}
+             desc={dish.description}
+             price={dish.price}
+             img={dish.img}
+             rating={4.7}
+             />
+          ))}
+         </div>
+         
+           {/* <div className="grid md:grid-cols-3 gap-8 mb-16">
+           <MenuCard
             title="Garlic Bread"
             desc="Crispy golden bread topped with buttery garlic."
             price="₹120"
@@ -53,14 +71,27 @@ export default function MenuPage() {
             img="https://images.unsplash.com/photo-1622268805718-ca073548d4ad?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c3R1ZmZlZCUyMG11c2hyb29tc3xlbnwwfDB8MHx8fDI%3D"
             rating={4.7}
             />
-        </div>
+        </div>  */}
 
-        {/* Pizza */}
+      
         <h2 className="text-3xl font-semibold flex items-center gap-2 mb-8">
           <Pizza className="text-red-600" /> Pizzas
         </h2>
         <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <MenuCard
+          {dishes 
+            .filter((dish) => dish.category === "pizza")
+            .map((dish, index) => (
+             <MenuCard
+              key={index}
+              title={dish.name}
+              desc={dish.description}
+              price={dish.price}
+              img={dish.img}
+              rating={4.8}
+            />
+           ))}
+       </div>
+          {/* <MenuCard
             title="Margherita"
             desc="Classic pizza with mozzarella, tomato & basil."
             price="₹350"
@@ -79,16 +110,29 @@ export default function MenuPage() {
             desc="Onions, peppers, olives & extra cheese."
             price="₹400"
             img="https://images.unsplash.com/photo-1617470703128-26a0fc9af10f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dmVnZ2llJTIwcGl6emF8ZW58MHwwfDB8fHwy"
-            rating={4.7}
-            />
-        </div>
+            rating={4.7} */}
+            
+        
 
-        {/* Beverages */}
+        
         <h2 className="text-3xl font-semibold flex items-center gap-2 mb-8">
           <Coffee className="text-red-600" /> Beverages
         </h2>
         <div className="grid md:grid-cols-3 gap-8">
-          <MenuCard
+          {dishes
+           .filter((dish) => dish.category === "Beverages")
+           .map((dish , index) => (
+             <MenuCard
+             key={index}
+             title={dish.name}
+             desc={dish.description}
+             price={dish.price}
+             img={dish.img}
+             rating={4.9}
+             />
+           ))}
+           </div>
+          {/* <MenuCard
             title="Cold Coffee"
             desc="Iced coffee served with cream & sugar."
             price="₹120"
@@ -109,7 +153,7 @@ export default function MenuPage() {
             img="https://images.unsplash.com/photo-1619898804188-e7bad4bd2127?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWFuZ28lMjBzbW9vdGhpZXxlbnwwfDB8MHx8fDI%3D"
             rating={4.6}
             />
-        </div>
+        </div> */} 
       </section>
     </div>
   );

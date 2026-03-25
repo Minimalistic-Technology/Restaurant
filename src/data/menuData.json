@@ -1,0 +1,84 @@
+[
+  {
+    "name": "Margherita Pizza",
+    "description": "Classic delight with fresh mozzarella & basil.",
+    "price": "₹350",
+    "img": "https://images.hattafoodhub.com/insecure/fit/1000/1000/ce/0/plain/https://hatta-foodhub-assests.s3.me-central-1.amazonaws.com/be22d8/prods/JxPiONitcQsuNuhTxUlMVyPRNMrWktYX2fUkwf8O.png@webp"
+},
+{
+    "name": "Grilled Salmon",
+    "description": "Served with lemon butter sauce & fresh herbs.",
+    "price": "₹380",
+    "img": "https://images.unsplash.com/photo-1485921325833-c519f76c4927?w=500"
+},
+{
+    "name": "Pasta Alfredo",
+    "description": "Creamy Alfredo sauce with parmesan & mushrooms.",
+    "price": "₹250",
+    "img": "https://www.allrecipes.com/thmb/ziUOvj4f_me5yvZhYCUy0n4IKbQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/276725-creamy-chicken-alfredo-VAT-001-Beauty-4x3-c4b026db5cb349f4b8fd627c56f91a42.jpg"
+  },
+
+{
+    "name": "Garlic Bread",
+    "category": "starters",
+    "description": "Crispy golden bread topped with buttery garlic.",
+    "price": "₹120",
+    "img": "https://images.unsplash.com/photo-1619535860434-ba1d8fa12536?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Z2FybGljJTIwYnJlYWR8ZW58MHwwfDB8fHwy"
+},
+{
+    "name": "Bruschetta",
+    "category": "starters",
+    "description": "Toasted bread topped with tomato, olive iol.",
+    "price": "₹150",
+    "img": "https://images.unsplash.com/photo-1720636615079-1841bcaaec84?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YnJ1c2NoZXR0YXxlbnwwfDB8MHx8fDI%3D"
+},
+{
+    "name": "Stuffed Mushrooms",
+    "category": "starters",
+    "description": "juisy mushrooms filled with cheese & herbs.",
+    "price": "₹180",
+    "img": "https://images.unsplash.com/photo-1622268805718-ca073548d4ad?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c3R1ZmZlZCUyMG11c2hyb29tc3xlbnwwfDB8MHx8fDI%3D"
+},
+{
+    "name": "Margherita pizza",
+    "category": "pizza",
+    "description": "Classic pizza with mozzarella, tomato & basil.",
+    "price": "₹350",
+    "img": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWFyZ2hlcml0YXxlbnwwfDB8MHx8fDI%3D"
+},
+{
+    "name": "Pepperoni pizza",
+    "category": "pizza",
+    "description": "Lodded with pepperoni & mozzarella cheese.",
+    "price": "₹420",
+    "img": "https://images.unsplash.com/photo-1605478371310-a9f1e96b4ff4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGVwcGVyb25pfGVufDB8MHwwfHx8Mg%3D%3D"
+},
+{
+    "name": "Veggie Supreme",
+    "category": "pizza",
+    "description": "Onions, peppers, olives & extra cheese.",
+    "price": "₹400",
+    "img": "https://images.unsplash.com/photo-1617470703128-26a0fc9af10f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dmVnZ2llJTIwcGl6emF8ZW58MHwwfDB8fHwy"
+},
+{
+    "name": "Cold Coffee",
+    "category": "Beverages",
+    "description": "Iced coffee served with cream & sugar.",
+    "price": "₹120",
+    "img": "https://images.unsplash.com/photo-1625242662341-5e92c5101338?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y29sZCUyMGNvZmZlZXxlbnwwfDB8MHx8fDI%3D"
+},
+{
+    "name": "Fresh Lime Soda ",
+    "category": "Beverages",
+    "description": "Refreshing soda with a tangy lime twist.",
+    "price": "₹90",
+    "img": "https://images.unsplash.com/photo-1617984312743-d81d2c151041?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bGltZSUyMHNvZGF8ZW58MHwwfDB8fHwy"
+},
+{
+    "name": " Mango Smoothie",
+    "category": "Beverages",
+    "description": "Chilled mango smoothie with creamy yogurt.",
+    "price": "₹150",
+    "img": "https://images.unsplash.com/photo-1619898804188-e7bad4bd2127?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWFuZ28lMjBzbW9vdGhpZXxlbnwwfDB8MHx8fDI%3D"
+}
+]

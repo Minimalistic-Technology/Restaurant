@@ -1,25 +1,26 @@
 import Image from "next/image";
+import dishes from '../data/menuData.json';
 
-const dishes = [
-  {
-    name: "Margherita Pizza",
-    description: "Classic delight with fresh mozzarella & basil.",
-    price: "₹350",
-    img: "https://images.hattafoodhub.com/insecure/fit/1000/1000/ce/0/plain/https://hatta-foodhub-assests.s3.me-central-1.amazonaws.com/be22d8/prods/JxPiONitcQsuNuhTxUlMVyPRNMrWktYX2fUkwf8O.png@webp"
-},
-{
-    name: "Grilled Salmon",
-    description: "Served with lemon butter sauce & fresh herbs.",
-    price: "₹380",
-    img: "https://www.pccmarkets.com/wp-content/uploads/2017/08/pcc-rosemary-grilled-salmon-flo.jpg"
-},
-{
-    name: "Pasta Alfredo",
-    description: "Creamy Alfredo sauce with parmesan & mushrooms.",
-    price: "₹250",
-    img: "https://www.allrecipes.com/thmb/ziUOvj4f_me5yvZhYCUy0n4IKbQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/276725-creamy-chicken-alfredo-VAT-001-Beauty-4x3-c4b026db5cb349f4b8fd627c56f91a42.jpg"
-  }
-];
+// const dishes = [
+//   {
+//     name: "Margherita Pizza",
+//     description: "Classic delight with fresh mozzarella & basil.",
+//     price: "₹350",
+//     img: "https://images.hattafoodhub.com/insecure/fit/1000/1000/ce/0/plain/https://hatta-foodhub-assests.s3.me-central-1.amazonaws.com/be22d8/prods/JxPiONitcQsuNuhTxUlMVyPRNMrWktYX2fUkwf8O.png@webp"
+// },
+// {
+//     name: "Grilled Salmon",
+//     description: "Served with lemon butter sauce & fresh herbs.",
+//     price: "₹380",
+//     img: "https://www.pccmarkets.com/wp-content/uploads/2017/08/pcc-rosemary-grilled-salmon-flo.jpg"
+// },
+// {
+//     name: "Pasta Alfredo",
+//     description: "Creamy Alfredo sauce with parmesan & mushrooms.",
+//     price: "₹250",
+//     img: "https://www.allrecipes.com/thmb/ziUOvj4f_me5yvZhYCUy0n4IKbQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/276725-creamy-chicken-alfredo-VAT-001-Beauty-4x3-c4b026db5cb349f4b8fd627c56f91a42.jpg"
+//   }
+// ];
 
 export default function FeaturedDishes() {
   return (
@@ -30,7 +31,7 @@ export default function FeaturedDishes() {
         </h2>
 
         <div className="grid gap-8 md:grid-cols-3">
-          {dishes.map((dish, idx) => (
+          {dishes.slice(0, 3).map((dish, idx) => (
             <div
               key={idx}
               className="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transform transition duration-300 group"
