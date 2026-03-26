@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "title": "Grilled Salmon Special",
+    "img": "/images/grilled-salmon.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Margherita Pizza",
+    "img": "/images/margherita-pizza.webp"
+  },
+  {
+    "id": 3,
+    "title": "Pasta Alfredo",
+    "img": "/images/pasta-alfredo.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Classic Pizza",
+    "img": "/images/pizza-1.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Veggie Pizza",
+    "img": "/images/pizza-2.png"
+  }
+]

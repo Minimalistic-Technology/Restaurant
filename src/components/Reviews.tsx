@@ -1,13 +1,9 @@
-
-
-
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules"; // Autoplay aur EffectFade hata diya
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "swiper/css/effect-fade";
 import Image from "next/image";
 
 const reviews = [
@@ -33,39 +29,35 @@ const reviews = [
 
 export default function Reviews() {
   return (
-    <section className="py-16 bg-gradient-to-r from-zinc-900 via-zinc-800 to-zinc-900 text-white">
+    <section className="py-16 bg-zinc-900 text-white"> 
       <div className="max-w-5xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8 text-white">
+        <h2 className="text-3xl font-bold text-center mb-8">
           What Our Customers Say
         </h2>
 
         <Swiper
-          modules={[Navigation, Pagination, Autoplay, EffectFade]}
+          modules={[Navigation, Pagination]} // Sirf Navigation aur Pagination rakha hai
           spaceBetween={30}
           slidesPerView={1}
           navigation
           pagination={{ clickable: true }}
-          autoplay={{ delay: 4000 }}
-          loop
-          effect="slide"
-        //   fadeEffect={{ crossFade: false }}
+          loop={false} // Loop bhi band kar diya taaki confusion na ho
         >
           {reviews.map((review, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-white rounded-xl shadow-xl p-8 text-center max-w-lg mx-auto transition-transform duration-500 text-black ">
+              <div className="bg-white rounded-xl p-8 text-center max-w-lg mx-auto text-black">
                 <div className="relative w-20 h-20 mx-auto mb-4">
                   <Image
                     src={review.img}
                     alt={review.name}
                     fill
-                    className="rounded-full object-cover border-2 border-[#ff7e5f]"
+                    className="rounded-full object-cover border-2 border-orange-500"
                   />
                 </div>
-                <p className=" italic mb-4">&quot;{review.text}&quot;</p>
-                <h4 className="text-[var(--color-red-shade)] text-lg font-semibold">{review.name}</h4>
-                <span className="">{review.role}</span>
+                <p className="italic mb-4">&quot;{review.text}&quot;</p>
+                <h4 className="text-orange-600 text-lg font-semibold">{review.name}</h4>
+                <span className="text-gray-600">{review.role}</span>
               </div>
-
             </SwiperSlide>
           ))}
         </Swiper>
